@@ -61,14 +61,13 @@ metadata:
   resourceVersion: '2237285'
   uid: 83f8d274-bb5d-416c-98f4-1cdcb7fa3c7b
 spec:
-  branch: feat/my-feature-01
-  clientSecretName: auth-4659g
-  forceSyncGeneration: 3
-  insecureSkipTLSVerify: false
-  paths:
-    - charts/
-    - ''
-  repo: git@github.com:infologistix/petclinic-app.git
+  branch: {{ .Values.gitRepo.spec.branch }}
+  clientSecretName: {{ .Values.gitRepo.spec.clientSecretName }}
+  forceSyncGeneration: {{ .Values.gitRepo.spec.forceSyncGeneration }}
+  insecureSkipTLSVerify: {{ .Values.gitRepo.spec.insecureSkipTLSVerify }}
+  paths: {{ .Values.gitRepo.spec.paths }}
+    ## nicht sicher, ob das so geht
+  repo: {{ .Values.gitRepo.spec.repo }}
   targets:
     - clusterSelector:
         matchExpressions:

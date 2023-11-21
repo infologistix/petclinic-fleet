@@ -1,0 +1,23 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: {{ .Values.name }}      ### <-- ersetzen
+  namespace: fleet-default
+spec:
+  branch: {{ .Values.branch }}    ### <-- ersetzen
+  clientSecretName: auth-4659g
+  repo: git@github.com:infologistix/petclinic-app.git
+
+  forceSyncGeneration: 3
+  insecureSkipTLSVerify: false
+  paths:
+    - charts/
+    - ''
+  
+  targets:
+    - clusterSelector:
+        matchExpressions:
+          - key: provider.cattle.io
+            operator: NotIn
+            values:
+              - harvester

@@ -1,0 +1,78 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  creationTimestamp: '2023-11-20T16:54:05Z'
+  generation: 12
+  managedFields:
+    - apiVersion: fleet.cattle.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          .: {}
+          f:branch: {}
+          f:clientSecretName: {}
+          f:forceSyncGeneration: {}
+          f:insecureSkipTLSVerify: {}
+          f:paths: {}
+          f:repo: {}
+          f:targets: {}
+      manager: rancher
+      operation: Update
+      time: '2023-11-20T18:20:05Z'
+    - apiVersion: fleet.cattle.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:commit: {}
+          f:conditions: {}
+          f:desiredReadyClusters: {}
+          f:display:
+            .: {}
+            f:readyBundleDeployments: {}
+            f:state: {}
+          f:gitJobStatus: {}
+          f:lastSyncedImageScanTime: {}
+          f:observedGeneration: {}
+          f:readyClusters: {}
+          f:resourceCounts:
+            .: {}
+            f:desiredReady: {}
+            f:missing: {}
+            f:modified: {}
+            f:notReady: {}
+            f:orphaned: {}
+            f:ready: {}
+            f:unknown: {}
+            f:waitApplied: {}
+          f:resources: {}
+          f:summary:
+            .: {}
+            f:desiredReady: {}
+            f:nonReadyResources: {}
+            f:ready: {}
+            f:waitApplied: {}
+      manager: fleetcontroller
+      operation: Update
+      subresource: status
+      time: '2023-11-21T08:47:05Z'
+  name: petclinic-deployment
+  namespace: fleet-default
+  resourceVersion: '2237285'
+  uid: 83f8d274-bb5d-416c-98f4-1cdcb7fa3c7b
+spec:
+  branch: feat/my-feature-01
+  clientSecretName: auth-4659g
+  forceSyncGeneration: 3
+  insecureSkipTLSVerify: false
+  paths:
+    - charts/
+    - ''
+  repo: git@github.com:infologistix/petclinic-app.git
+  targets:
+    - clusterSelector:
+        matchExpressions:
+          - key: provider.cattle.io
+            operator: NotIn
+            values:
+              - harvester

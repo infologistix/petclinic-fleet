@@ -2,7 +2,7 @@ apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
   name: {{ .Values.name }}      ### <-- ersetzen
-  namespace: fleet-default
+  namespace: fleet-local
 spec:
   branch: {{ .Values.branch }}    ### <-- ersetzen
   clientSecretName: auth-4659g

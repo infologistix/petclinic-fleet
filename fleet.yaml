@@ -5,3 +5,5 @@ helm:
   values: 
     name: "fleet-test"
     branch: new-feature-01
+  labels:
+    fleet.cattle.io/agent: false

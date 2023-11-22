@@ -3,6 +3,8 @@ kind: GitRepo
 metadata:
   name: {{ .Values.name }}      ### <-- ersetzen
   namespace: fleet-default
+  labels:
+    fleet.cattle.io/agent: false
 spec:
   branch: {{ .Values.branch }}    ### <-- ersetzen
   clientSecretName: auth-4659g

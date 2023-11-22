@@ -1,0 +1,7 @@
+defaultNamespace: fleet-local
+helm:
+  repo: https://github.com/infologistix/petclinic-fleet
+  releaseName: fleet-test
+  values: 
+    name: "fleet-test"
+    branch: new-feature-01

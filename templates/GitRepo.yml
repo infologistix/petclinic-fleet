@@ -1,25 +1,19 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: {{ .Values.name }}      ### <-- ersetzen
+  name: {{ .Values.name }} fleet-job-new-feature-01
   namespace: fleet-default
-  labels:
-    fleet.cattle.io/agent: false
+
 spec:
-  branch: {{ .Values.branch }}    ### <-- ersetzen
+  branch: {{ .Values.branch }}
   clientSecretName: auth-4659g
   repo: git@github.com:infologistix/petclinic-app.git
-
   forceSyncGeneration: 3
-  insecureSkipTLSVerify: false
-  paths:
-    - charts/
-    - ''
-  
-  targets:
-    - clusterSelector:
-        matchExpressions:
-          - key: provider.cattle.io
-            operator: NotIn
-            values:
-              - harvester
+  paths: 
+   - charts/
+   - ''
+
+
+
+
+

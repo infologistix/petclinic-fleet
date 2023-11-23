@@ -3,7 +3,7 @@ helm:
   repo: https://github.com/infologistix/petclinic-fleet
   releaseName: fleet-test
   values: 
-    name: "fleet-test"
+    name: fleet-test
     branch: new-feature-01
   labels:
     fleet.cattle.io/agent: false

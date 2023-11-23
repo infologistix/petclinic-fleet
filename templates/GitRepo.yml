@@ -1,7 +1,7 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: {{ .Values.name }} fleet-job-new-feature-01
+  name: {{ .Values.name }}
   namespace: fleet-default
 
 spec:

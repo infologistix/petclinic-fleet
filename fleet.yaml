@@ -3,5 +3,5 @@ helm:
   repo: https://github.com/infologistix/petclinic-fleet
   releaseName: fleet-branch
   values:
-    name: fleet-job-success-test
-    branch: success-test
+    name: fleet-job-double-deploy-bug-ns-test
+    branch: double-deploy-bug-ns-test

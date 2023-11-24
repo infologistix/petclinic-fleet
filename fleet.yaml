@@ -1,9 +1,8 @@
 defaultNamespace: fleet-local
 helm:
   repo: https://github.com/infologistix/petclinic-fleet
-  releaseName: fleet-test
+  releaseName: fleet-branch
   values: 
-    name: fleet-test
+    name: fleet-branch
     branch: main
-  labels:
-    fleet.cattle.io/agent: false
+

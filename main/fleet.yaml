@@ -4,4 +4,4 @@ helm:
   releaseName: fleet-main
   values:
     name: fleet-job-main
-    branch: petclinic-dev-2
+    branch: main

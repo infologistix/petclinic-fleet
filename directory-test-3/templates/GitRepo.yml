@@ -1,0 +1,19 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: {{ .Values.name }}
+  namespace: fleet-default
+
+spec:
+  branch: {{ .Values.branch }}
+  clientSecretName: auth-4659g
+  repo: git@github.com:infologistix/petclinic-app.git
+  forceSyncGeneration: 3
+  paths: 
+   - charts/
+
+
+  targets:
+    - clusterName: c-6pcxg
+
+

@@ -1,7 +1,0 @@
-defaultNamespace: fleet-local
-helm:
-  repo: https://github.com/infologistix/petclinic-fleet
-  releaseName: petclinic-directory-test-2
-  values:
-    name: fleet-job-directory-test-2
-    branch: directory-test-2

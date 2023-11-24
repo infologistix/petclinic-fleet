@@ -1,7 +1,7 @@
 defaultNamespace: fleet-local
 helm:
   repo: https://github.com/infologistix/petclinic-fleet
-  releaseName: fleet-branch
+  releaseName: fleet-main
   values:
-    name: fleet-job-double-deploy-bug-ns-test
-    branch: double-deploy-bug-ns-test
+    name: fleet-job-main
+    branch: main

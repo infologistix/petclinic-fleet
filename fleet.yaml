@@ -2,7 +2,6 @@ defaultNamespace: fleet-local
 helm:
   repo: https://github.com/infologistix/petclinic-fleet
   releaseName: fleet-branch
-  values: 
-    name: fleet-branch
-    branch: main
-
+  values:
+    name: fleet-job-success-test
+    branch: success-test

@@ -1,0 +1,7 @@
+defaultNamespace: fleet-local
+helm:
+  repo: https://github.com/infologistix/petclinic-fleet
+  releaseName: fleet-git-checkout-branch-feature1
+  values:
+    name: fleet-job-git-checkout-branch-feature1
+    branch: git-checkout-branch-feature1

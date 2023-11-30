@@ -1,7 +1,0 @@
-defaultNamespace: fleet-local
-helm:
-  repo: https://github.com/infologistix/petclinic-fleet
-  releaseName: fleet-feature2
-  values:
-    name: fleet-job-feature2
-    branch: feature2
